@@ -13,6 +13,7 @@ echo "Disk     : $(df -h / | awk 'NR==2{print $4 " free"}')"
 echo "Git      : $(git --version 2>/dev/null || echo 'not found')"
 echo "Python   : $(python3 --version 2>/dev/null || echo 'not found')"
 echo "Node     : $(node --version 2>/dev/null || echo 'not found')"
+echo "mmk      : $(mmk version 2>/dev/null || echo 'not installed')"
 echo "Remote   : ${CLAUDE_CODE_REMOTE:-false}"
 echo "=== Ready! ==="
 

@@ -9,17 +9,17 @@ fi
 
 echo "=== Installing Libraries ==="
 
-# yt-dlp: download YouTube transcripts
-if command -v yt-dlp >/dev/null 2>&1; then
-  echo "yt-dlp    : $(yt-dlp --version) (already installed)"
+# mmk: Magic Meal Kits CLI (YouTube transcript, metadata, etc.)
+if command -v mmk >/dev/null 2>&1; then
+  echo "mmk       : $(mmk version 2>/dev/null || echo 'installed') (already installed)"
 else
-  echo "yt-dlp    : installing..."
-  pip install -q yt-dlp 2>/dev/null || pip3 install -q yt-dlp 2>/dev/null || {
-    echo "yt-dlp    : FAILED (pip not available)"
+  echo "mmk       : installing..."
+  npm install -g @magic-meal-kits/cli 2>/dev/null || {
+    echo "mmk       : FAILED (npm not available)"
     echo "=== Done ==="
     exit 0
   }
-  echo "yt-dlp    : $(yt-dlp --version) (installed)"
+  echo "mmk       : $(mmk version 2>/dev/null || echo 'installed')"
 fi
 
 echo "=== Done ==="
