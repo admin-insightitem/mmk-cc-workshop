@@ -10,6 +10,9 @@
 
 mmk (Magic Meal Kits)는 YouTube 자막 추출, 메타데이터 조회 등을 지원하는 CLI 도구입니다.
 
+**중요: 현재 토큰은 YouTube 전용입니다. `mmk youtube` 명령어만 사용하세요.**
+`mmk notion`, `mmk paymint` 등 다른 명령어는 권한이 없어 실패합니다 (403 insufficient_scope).
+
 ### 설정
 
 ```bash
@@ -31,6 +34,12 @@ mmk youtube metadata <youtube-url>
 # YouTube 영상 타입 확인 (일반 영상 vs Short)
 mmk youtube videotype <youtube-url>
 ```
+
+### 사용 불가 명령어 (토큰 권한 없음)
+
+- `mmk notion ...` — 사용 불가
+- `mmk paymint ...` — 사용 불가
+- `mmk threads ...` — 사용 불가
 
 ## 세션 시작 시
 
