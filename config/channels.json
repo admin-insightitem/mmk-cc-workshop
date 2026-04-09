@@ -1,0 +1,22 @@
+{
+  "channels": [
+    {
+      "name": "삼프로TV",
+      "channelId": "UChlv4GSd7OQl3js-jkLOnFA",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UChlv4GSd7OQl3js-jkLOnFA"
+    },
+    {
+      "name": "슈카월드",
+      "channelId": "UCsJ6RuBiTVWRX156FVbeaGg",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsJ6RuBiTVWRX156FVbeaGg"
+    }
+  ],
+  "keywords": ["증시", "전망", "분석"],
+  "slack": {
+    "channel": "#all-kyungmin"
+  },
+  "notion": {
+    "databaseId": "c17c487212c1471fa0056dedfda6a68f",
+    "databaseUrl": "https://www.notion.so/c17c487212c1471fa0056dedfda6a68f"
+  }
+}
