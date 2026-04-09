@@ -17,20 +17,19 @@ YouTube 영상 요약 데이터를 Notion 데이터베이스에 새 페이지로
 
 ## 실행 단계
 
-### 1. 데이터베이스 찾기
+### 1. 데이터베이스 확인
 
-`notion-search` MCP 도구로 "YouTube 증시 요약" 데이터베이스를 검색합니다.
+`config/channels.json`에서 Notion 데이터베이스 ID를 읽습니다.
 
-```
-query: "YouTube 증시 요약"
-filters: { "type": "database" }
-```
+- 데이터베이스 ID: `c17c487212c1471fa0056dedfda6a68f`
+- 부모 페이지: "푸르공 워크샵" (`33d66431c1798048a534e62422dcbbff`)
 
-데이터베이스를 찾지 못하면 사용자에게 알리고, 아래 Step 1-1로 새로 생성합니다.
+`notion-fetch`로 데이터베이스가 존재하는지 확인합니다.
+찾지 못하면 아래 Step 1-1로 새로 생성합니다.
 
 #### Step 1-1. 데이터베이스 생성 (최초 1회)
 
-`notion-search`로 저장할 부모 페이지를 먼저 찾고, `notion-create-database` MCP 도구를 사용합니다.
+"푸르공 워크샵" 페이지(`33d66431c1798048a534e62422dcbbff`) 하위에 `notion-create-database` MCP 도구로 생성합니다.
 
 ```sql
 CREATE TABLE "YouTube 증시 요약" (
@@ -54,7 +53,7 @@ CREATE TABLE "YouTube 증시 요약" (
 
 ```json
 {
-  "parent": { "database_id": "<database-id>" },
+  "parent": { "database_id": "c17c487212c1471fa0056dedfda6a68f" },
   "pages": [
     {
       "properties": {

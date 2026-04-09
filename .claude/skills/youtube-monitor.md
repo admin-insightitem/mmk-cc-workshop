@@ -54,7 +54,7 @@ mmk youtube transcript "<videoUrl>"
 
 #### 4-2. Slack 알림 전송
 
-`slack_search_channels` MCP 도구로 config의 Slack 채널을 검색하여 channel_id를 얻고,
+`config/channels.json`에서 Slack 채널 ID(`C09JXF2BV33`)를 읽고,
 `slack_send_message` MCP 도구로 아래 형식의 메시지를 전송합니다:
 
 ```
@@ -75,8 +75,8 @@ mmk youtube transcript "<videoUrl>"
 
 #### 4-3. Notion 저장
 
-`notion-search` MCP 도구로 "YouTube 증시 요약" 데이터베이스를 검색합니다.
-데이터베이스가 없으면 `/notion-save` 스킬의 Step 1-1을 참고하여 생성합니다.
+`config/channels.json`에서 Notion 데이터베이스 ID(`c17c487212c1471fa0056dedfda6a68f`)를 읽습니다.
+데이터베이스가 없으면 "푸르공 워크샵" 페이지(`33d66431c1798048a534e62422dcbbff`) 하위에 새로 생성합니다.
 
 `notion-create-pages` MCP 도구로 다음 데이터를 저장합니다:
 - 제목: 영상 제목
