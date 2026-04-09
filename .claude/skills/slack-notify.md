@@ -17,12 +17,13 @@ YouTube 영상 요약을 Slack 채널에 전송합니다.
 
 ## 실행 단계
 
-### 1. Slack 채널 ID 조회
+### 1. Slack 채널 ID 확인
 
-`slack_search_channels` MCP 도구로 대상 채널을 검색합니다.
+`config/channels.json`에서 Slack 채널 ID를 읽습니다.
 
-- 기본 채널: `#all-kyungmin` (config/channels.json 참조)
-- 검색어: `all-kyungmin`
+- 채널: `#all-kyungmin`
+- 채널 ID: `C09JXF2BV33` (kyungmingroup.slack.com)
+- config에 channelId가 없으면 `slack_search_channels`로 검색
 
 ### 2. 메시지 포맷 구성
 
@@ -48,7 +49,7 @@ YouTube 영상 요약을 Slack 채널에 전송합니다.
 
 `slack_send_message` MCP 도구를 사용하여 메시지를 전송합니다.
 
-- `channel_id`: 1단계에서 조회한 채널 ID
+- `channel_id`: `C09JXF2BV33` (또는 config에서 읽은 채널 ID)
 - `message`: 2단계에서 구성한 메시지
 
 ### 주의사항

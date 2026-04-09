@@ -13,10 +13,14 @@
   ],
   "keywords": ["증시", "전망", "분석"],
   "slack": {
-    "channel": "#all-kyungmin"
+    "channel": "#all-kyungmin",
+    "channelId": "C09JXF2BV33",
+    "workspace": "kyungmingroup.slack.com"
   },
   "notion": {
     "databaseId": "c17c487212c1471fa0056dedfda6a68f",
-    "databaseUrl": "https://www.notion.so/c17c487212c1471fa0056dedfda6a68f"
+    "databaseUrl": "https://www.notion.so/c17c487212c1471fa0056dedfda6a68f",
+    "parentPageId": "33d66431c1798048a534e62422dcbbff",
+    "parentPageName": "푸르공 워크샵"
   }
 }
